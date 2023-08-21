@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../src/styling/__variables.css';
+@import '../src/styling/base.css';
 
 :root{
     --primary: #FAF1E4;

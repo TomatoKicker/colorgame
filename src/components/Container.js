@@ -1,27 +1,19 @@
+import GameBoard from "./GameBoard";
 import Header from "./Header";
-import ScoreHolder from "./ScoreHolder";
+import ScoreBoard from "./ScoreBoard";
 
 const Container = () => {
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto glass mt-10">
             <div className="flex flex-row">
                 <Header/>
             </div>
             <div className="flex flex-row">
-                <ScoreHolder/>
+                <ScoreBoard name="John Doe" score="12"/>
             </div>
             <div className="flex flex-row">
-                <div className="basis-1/2">
-                    <h1 className="text-3xl font-bold underline">
-                        Hello world!
-                    </h1>
-                </div>
-                <div className="basis-1/2">
-                    <h1 className="text-3xl font-bold underline">
-                        Hello world!
-                    </h1>
-                </div>
+                <GameBoard/>
             </div>
         </div>
     )
