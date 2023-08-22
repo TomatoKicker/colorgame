@@ -29,7 +29,7 @@ const Container = () => {
                 <ScoreBoard name="John Doe" score="12" currentScore = {wonRound}/>
             </div>
             <div className="flex flex-row">
-                <GameBoard incrementWonRound = {incrementWonRound} incrementRound={incrementRound} resetWonRound={resetWonRound} round={round}/>
+                <GameBoard incrementWonRound = {incrementWonRound} incrementRound={incrementRound} resetWonRound={resetWonRound} round={round} wonRound = {wonRound}/>
             </div>
         </div>
     )
