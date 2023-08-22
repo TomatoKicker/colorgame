@@ -1,4 +1,4 @@
-const ColorUnit = ({ color, odd, id, increment, round, wonRound, resetWonRound}) => {
+const ColorUnit = ({ color, odd, id, increment, round, wonRound, resetWonRound }) => {
 
     function lightenHexColor(hexColor, amount) {
         // Entferne das '#'-Zeichen, wenn es vorhanden ist
@@ -20,21 +20,24 @@ const ColorUnit = ({ color, odd, id, increment, round, wonRound, resetWonRound})
         return newHexColor;
     }
 
-    let lighten = 50 - round * (round < 5 ? 3 : round < 8 ? 2 : 1);
+    let lighten = 30 - round * (round < 5 ? 2 : 1);
     const style = {
         width: 100,
         height: 100,
         backgroundColor: odd ? lightenHexColor(color, lighten) : color
     }
+    if (odd) {
+        console.log(lighten)
+    }
 
     const onClickHandler = () => {
         if (!odd) {
             alert("Lose");
-            {resetWonRound()}
+            resetWonRound() 
             return
         }
-        { increment() }
-        {wonRound()}
+         increment() 
+         wonRound() 
     }
 
 

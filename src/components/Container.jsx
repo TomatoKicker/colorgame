@@ -13,7 +13,13 @@ const Container = () => {
      };
     const resetWonRound = () => {
         setWonRound(0)
+        setRound(0)
     }
+
+    const [round, setRound] = useState(0);
+    const incrementRound = () => {
+        setRound(round + 1);
+    };
     return (
         <div className="container mx-auto glass mt-10">
             <div className="flex flex-row">
@@ -23,7 +29,7 @@ const Container = () => {
                 <ScoreBoard name="John Doe" score="12" currentScore = {wonRound}/>
             </div>
             <div className="flex flex-row">
-                <GameBoard incrementWonRound = {incrementWonRound} resetWonRound={resetWonRound}/>
+                <GameBoard incrementWonRound = {incrementWonRound} incrementRound={incrementRound} resetWonRound={resetWonRound} round={round}/>
             </div>
         </div>
     )
