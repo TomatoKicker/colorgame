@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../src/styling/base.css';
 
 :root{
     --primary: #FAF1E4;
@@ -25,3 +24,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import '../src/styling/base.css';
