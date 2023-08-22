@@ -21,7 +21,7 @@ const ScoreBoard = ({name, score, currentScore}) => {
             <div className="flex flex-row">
                 <div className="basis-1/2 text-center font-bold">
                     <p>
-                    you
+                    You
                     </p>
                 </div>
                 <div className="basis-1/2 text-center font-bold">
