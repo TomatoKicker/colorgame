@@ -1,4 +1,4 @@
-const ColorUnit = ({ color, odd, id, increment, round, wonRound, resetWonRound, showModal, score }) => {
+const ColorUnit = ({ color, odd, id, increment, round, showModal, score }) => {
 
     function lightenHexColor(hexColor, amount) {
         // Entferne das '#'-Zeichen, wenn es vorhanden ist
@@ -31,11 +31,9 @@ const ColorUnit = ({ color, odd, id, increment, round, wonRound, resetWonRound, 
         if (!odd) {
             console.log(score)
             showModal()
-            resetWonRound() 
             return
         }
          increment() 
-         wonRound() 
     }
 
 

@@ -6,13 +6,7 @@ import { useState } from "react";
 
 const Container = () => {
 
-    const [wonRound, setWonRound] = useState(0);
-
-    const incrementWonRound = () => {
-        setWonRound(wonRound + 1);
-     };
-    const resetWonRound = () => {
-        setWonRound(0)
+    const resetRound = () => {
         setRound(0)
     }
 
@@ -26,10 +20,10 @@ const Container = () => {
                 <Header/>
             </div>
             <div className="flex flex-row">
-                <ScoreBoard name="John Doe" score="12" currentScore = {wonRound}/>
+                <ScoreBoard name="John Doe" score="12" currentScore = {round}/>
             </div>
             <div className="flex flex-row">
-                <GameBoard incrementWonRound = {incrementWonRound} incrementRound={incrementRound} resetWonRound={resetWonRound} round={round} wonRound = {wonRound}/>
+                <GameBoard incrementRound={incrementRound} resetRound={resetRound} round={round}/>
             </div>
         </div>
     )

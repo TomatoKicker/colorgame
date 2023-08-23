@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import ColorUnit from "./ColorUnit";
 import Modal from "./Modal";
 
-const GameBoard = ({incrementWonRound, incrementRound, resetWonRound, round, wonRound}) => {
+const GameBoard = ({ incrementWonRound, incrementRound, resetRound, round }) => {
 
     const colAmount = 4;
     const rowAmount = 4;
@@ -28,7 +28,7 @@ const GameBoard = ({incrementWonRound, incrementRound, resetWonRound, round, won
         for (let j = 0; j < colAmount; j++) {
             let id = i.toString() + j.toString()
             let odd = id === randomUnit ? true : false
-            cols.push(<ColorUnit color={color} odd={odd} id={id} increment={incrementRound} round={round} wonRound = {incrementWonRound} resetWonRound = {resetWonRound} showModal={showModal}/>)
+            cols.push(<ColorUnit color={color} odd={odd} id={id} increment={incrementRound} round={round} showModal={showModal} />)
         }
         rows.push(
             <div className="flex flex-row">
@@ -41,7 +41,7 @@ const GameBoard = ({incrementWonRound, incrementRound, resetWonRound, round, won
     return (
         <div className="colorGameGameBoard mx-auto">
             {rows}
-            <Modal open={open} cancelbuttonref={cancelbuttonref} setOpen={setOpen} wonRound={wonRound}/>
+            <Modal open={open} cancelbuttonref={cancelbuttonref} setOpen={setOpen} round={round} resetRound={resetRound} />
         </div>
     )
 }
