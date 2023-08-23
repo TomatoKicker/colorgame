@@ -22,14 +22,11 @@ const ColorUnit = ({ color, odd, id, increment, round, showModal, score }) => {
 
     let lighten = 30 - round * (round < 5 ? 2 : 1);
     const style = {
-        width: 100,
-        height: 100,
-        backgroundColor: odd ? lightenHexColor(color, lighten) : color
+        backgroundColor: odd === "1" ? lightenHexColor(color, lighten) : color
     }
 
     const onClickHandler = () => {
-        if (!odd) {
-            console.log(score)
+        if (odd === "0") {
             showModal()
             return
         }
@@ -39,7 +36,7 @@ const ColorUnit = ({ color, odd, id, increment, round, showModal, score }) => {
 
     return (
         <button onClick={onClickHandler}>
-            <div className="rounded-full  w-1/4 m-5" style={style} odd={odd} key={{ id }}>
+            <div className="rounded-full m-5 colorUnit" style={style} odd={odd} key={ id }>
             </div>
         </button>
     )

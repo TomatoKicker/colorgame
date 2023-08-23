@@ -15,7 +15,7 @@ const Container = () => {
         setRound(round + 1);
     };
     return (
-        <div className="container mx-auto glass mt-10">
+        <div className="container mx-auto mt-10">
             <div className="flex flex-row">
                 <Header/>
             </div>

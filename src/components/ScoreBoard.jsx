@@ -2,7 +2,7 @@ const ScoreBoard = ({name, score, currentScore}) => {
     return (
         <div className="colorGameScoreBoard mx-auto">
             <div className="flex flex-row">
-                <h2 class="pt-10 px-5 mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-4xl lg:text-5xl mx-auto">
+                <h2 className="pt-10 px-5 mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-4xl lg:text-5xl mx-auto">
                     Score Board
                 </h2>
             </div>

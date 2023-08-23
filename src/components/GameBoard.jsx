@@ -27,11 +27,11 @@ const GameBoard = ({ incrementWonRound, incrementRound, resetRound, round }) => 
     for (let i = 0; i < rowAmount; i++) {
         for (let j = 0; j < colAmount; j++) {
             let id = i.toString() + j.toString()
-            let odd = id === randomUnit ? true : false
-            cols.push(<ColorUnit color={color} odd={odd} id={id} increment={incrementRound} round={round} showModal={showModal} />)
+            let odd = id === randomUnit ? "1" : "0"
+            cols.push(<ColorUnit color={color} odd={odd} key={id} id = {id} increment={incrementRound} round={round} showModal={showModal} />)
         }
         rows.push(
-            <div className="flex flex-row">
+            <div className="flex flex-row" key={i}>
                 {cols}
             </div>
         )
