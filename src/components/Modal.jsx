@@ -1,6 +1,5 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 const Modal = ({open, cancelButtonRef, setOpen, round, resetRound}) => {
     return (
         <div className='colorGameModal'>

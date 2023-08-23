@@ -1,0 +1,15 @@
+@keyframes rundown {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+.timer {
+    animation-name: rundown;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    transition-timing-function: linear;
+}
