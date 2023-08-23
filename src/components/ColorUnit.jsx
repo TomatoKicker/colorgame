@@ -20,7 +20,7 @@ const ColorUnit = ({ color, odd, id, increment, round, showModal, score }) => {
         return newHexColor;
     }
 
-    let lighten = 30 - round * 1;
+    let lighten = 30 - (round >= 29 ? 29 : round * 1);
     const style = {
         backgroundColor: odd === "1" ? lightenHexColor(color, lighten) : color
     }
